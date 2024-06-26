@@ -1,0 +1,13 @@
+{
+  "include": ["."],
+  "exclude": ["node_modules", "dist", "build"],
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "Node16",
+    // "rootDir": "./",
+    "baseUrl": ".",
+    // "outDir": "./",
+    "strict": true,
+    "skipLibCheck": true
+  }
+}
