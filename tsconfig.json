@@ -1,13 +1,17 @@
 {
-  "include": ["."],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "build"],
   "compilerOptions": {
     "target": "ES2022",
-    "module": "Node16",
-    // "rootDir": "./",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "lib": ["ES2022"],
+    "rootDir": "./src",
+    "outDir": "./dist",
     "baseUrl": ".",
-    // "outDir": "./",
     "strict": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
   }
 }

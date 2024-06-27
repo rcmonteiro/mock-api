@@ -1,0 +1,72 @@
+{
+  "entities": [
+    {
+      "name": "Task",
+      "properties": {
+        "id": "uuid",
+        "title": "title",
+        "createdAt": "isoDateString",
+        "completedAt?": "isoDateString"
+      },
+      "seed": 10
+    }
+  ],
+  "routes": [
+    { 
+      "path": "/tasks",
+      "method": "GET",
+      "entity": "Task",
+      "response": {
+        "status": 200,
+        "output": true,
+        "wrapper": "tasks"
+      }
+    },
+    { 
+      "path": "/tasks",
+      "method": "POST",
+      "entity": "Task",
+      "response": {
+        "status": 201,
+        "output": false
+      }
+    },
+    {
+      "path": "/tasks/:id",
+      "method": "GET",
+      "entity": "Task",
+      "response": {
+        "status": 200,
+        "output": true,
+        "wrapper": "task"
+      }
+    },
+    {
+      "path": "/tasks/:id",
+      "method": "DELETE",
+      "entity": "Task",
+      "response": {
+        "status": 204,
+        "output": false
+      }
+    },
+    {
+      "path": "/tasks/:id",
+      "method": "PATCH",
+      "entity": "Task",
+      "response": {
+        "status": 204,
+        "output": false
+      }
+    },
+    {
+      "path": "/tasks/:id",
+      "method": "PUT",
+      "entity": "Task",
+      "response": {
+        "status": 204,
+        "output": false
+      }
+    }
+  ]
+}
